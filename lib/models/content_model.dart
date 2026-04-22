@@ -1,25 +1,31 @@
-class MenuSection {
+abstract class MenuNode {
   final String title;
   final String id;
-  final List<MenuItem> items;
 
-  MenuSection({
+  MenuNode({
     required this.title,
     required this.id,
-    required this.items,
   });
 }
 
-class MenuItem {
-  final String title;
-  final String id;
+class MenuSection extends MenuNode {
+  final List<MenuNode> items;
+
+  MenuSection({
+    required String title,
+    required String id,
+    required this.items,
+  }) : super(title: title, id: id);
+}
+
+class MenuItem extends MenuNode {
   final String type; // 'teoria' or 'practica'
 
   MenuItem({
-    required this.title,
-    required this.id,
+    required String title,
+    required String id,
     required this.type,
-  });
+  }) : super(title: title, id: id);
 }
 
 // Sample data

@@ -44,7 +44,7 @@ class _SidebarWidgetState extends State<SidebarWidget> {
     );
   }
 
-  List<Widget> _buildMenuItems(List<dynamic> items) {
+  List<Widget> _buildMenuItems(List<MenuNode> items) {
     return items.map((item) {
       if (item is MenuSection) {
         return _buildMenuSection(item);
