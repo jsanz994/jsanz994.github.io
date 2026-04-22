@@ -1,9 +1,0 @@
-title: "RA4 · Diseño de Interfaces Gráficas"
-description: "Usabilidad y Accesibilidad — Desarrollo de Interfaces (DAM 2º)"
-baseurl: ""
-url: "https://jsanz994.github.io"
-markdown: kramdown
-kramdown:
-  input: GFM
-plugins:
-  - jekyll-seo-tag
