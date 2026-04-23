@@ -1,6 +1,9 @@
 site_name: Mi Sitio
 site_url: https://jsanz994.github.io
 
+docs_dir: .
+site_dir: site
+
 theme:
   name: material
 
