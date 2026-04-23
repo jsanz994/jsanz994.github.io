@@ -1,8 +1,10 @@
 site_name: FlutterFlow — DAM
 site_url: https://jsanz994.github.io
 
-docs_dir: docs
+docs_dir: .
 site_dir: site
+exclude_docs: |
+  docs/index.md
 
 theme:
   name: material
@@ -33,10 +35,10 @@ theme:
 nav:
   - Inicio: index.md
   - Módulos:
-    - 1. Introducción a FlutterFlow: 01-introduccion/index.md
-    - 2. Interfaz y entorno: 02-interfaz/index.md
-    - 3. Widgets y UI: 03-widgets/index.md
-    - 4. Navegación y rutas: 04-navegacion/index.md
-    - 5. Base de datos: 05-datos/index.md
-    - 6. Lógica y acciones: 06-logica/index.md
-    - 7. Despliegue: 07-despliegue/index.md
+    - 1. Introducción a FlutterFlow: docs/01-introduccion/index.md
+    - 2. Interfaz y entorno: docs/02-interfaz/index.md
+    - 3. Widgets y UI: docs/03-widgets/index.md
+    - 4. Navegación y rutas: docs/04-navegacion/index.md
+    - 5. Base de datos: docs/05-datos/index.md
+    - 6. Lógica y acciones: docs/06-logica/index.md
+    - 7. Despliegue: docs/07-despliegue/index.md
