@@ -8,7 +8,7 @@ theme:
   name: material
   language: es
   icon:
-    logo: simple/flutterflow
+    logo: material/cellphone-arrow-down
   palette:
     - scheme: default
       primary: blue
