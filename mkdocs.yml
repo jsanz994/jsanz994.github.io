@@ -1,0 +1,8 @@
+site_name: Mi Sitio
+site_url: https://jsanz994.github.io
+
+theme:
+  name: material
+
+nav:
+  - Inicio: index.md
