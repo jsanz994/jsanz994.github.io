@@ -1,11 +1,42 @@
-site_name: Mi Sitio
+site_name: FlutterFlow — DAM
 site_url: https://jsanz994.github.io
 
-docs_dir: .
+docs_dir: docs
 site_dir: site
 
 theme:
   name: material
+  language: es
+  icon:
+    logo: simple/flutterflow
+  palette:
+    - scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
 
 nav:
   - Inicio: index.md
+  - Módulos:
+    - 1. Introducción a FlutterFlow: 01-introduccion/index.md
+    - 2. Interfaz y entorno: 02-interfaz/index.md
+    - 3. Widgets y UI: 03-widgets/index.md
+    - 4. Navegación y rutas: 04-navegacion/index.md
+    - 5. Base de datos: 05-datos/index.md
+    - 6. Lógica y acciones: 06-logica/index.md
+    - 7. Despliegue: 07-despliegue/index.md
