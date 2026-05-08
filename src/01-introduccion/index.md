@@ -1,15 +1,18 @@
 # 1. Introducción a FlutterFlow
 
-## ¿Qué es FlutterFlow?
+## Criterios de evaluación del Resultado de aprendizaje
 
-FlutterFlow es una plataforma de desarrollo visual basada en Flutter que permite crear aplicaciones móviles y web de forma visual, sin necesidad de escribir código manualmente.
+<div class="criterios">
+  <div class="criterio"><p>Se ha creado un interfaz gráfico utilizando las herramientas de un editor visual.</p></div>
+  <div class="criterio"><p>Se han utilizado las funciones del editor para ubicar los componentes del interfaz.</p></div>
+  <div class="criterio"><p>Se han modificado las propiedades de los componentes para adecuarlas a las necesidades de la aplicación.</p></div>
+  <div class="criterio"><p>Se han asociado a los eventos las acciones correspondientes.</p></div>
+  <div class="criterio"><p>Se ha desarrollado una aplicación que incluye el interfaz gráfico obtenido.</p></div>
+</div>
 
-## Objetivos del módulo
+## Temporalización
 
-- Conocer qué es FlutterFlow y para qué se usa
-- Crear una cuenta y explorar el dashboard
-- Crear un proyecto nuevo desde cero o desde una plantilla
-- Entender la estructura básica de un proyecto
+> *Pendiente de desarrollar*
 
 ## Contenidos
 

@@ -20,9 +20,4 @@ En este curso aprenderás a construir aplicaciones móviles y web funcionales si
 | # | Módulo | Descripción |
 |---|--------|-------------|
 | 1 | [Introducción a FlutterFlow](01-introduccion/index.md) | Qué es, cómo registrarse y crear el primer proyecto |
-| 2 | [Interfaz y entorno](02-interfaz/index.md) | Canvas, paneles y flujo de trabajo |
-| 3 | [Widgets y UI](03-widgets/index.md) | Componentes visuales y layouts |
-| 4 | [Navegación y rutas](04-navegacion/index.md) | Pantallas, rutas y paso de parámetros |
-| 5 | [Base de datos](05-datos/index.md) | Firebase Firestore: colecciones y CRUD |
-| 6 | [Lógica y acciones](06-logica/index.md) | Actions, variables de estado y condicionales |
-| 7 | [Despliegue](07-despliegue/index.md) | Publicar en web, APK y TestFlight |
+| 2 | [Accesibilidad y Usabilidad](02-accesibilidad-y-usabilidad/index.md) | Estándares de diseño accesible, menús, controles, colores y tipografía |
