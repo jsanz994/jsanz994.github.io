@@ -1,3 +1,12 @@
+/* ── Imágenes de contenido ── */
+.img-contenido {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* ── Criterios de evaluación ── */
 .criterios {
   display: flex;
@@ -67,4 +76,43 @@
 [data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
   background-color: rgba(176, 190, 197, 0.22);
   font-weight: 600;
+}
+
+/* ── Jerarquía de títulos ── */
+
+/* H2: títulos de sección (2.1, 2.2...) */
+.md-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+/* H3: subtítulos */
+.md-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding-left: 0.75rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* Colores en modo claro */
+[data-md-color-scheme="default"] .md-content h2 {
+  color: #37474f;
+}
+
+[data-md-color-scheme="default"] .md-content h3 {
+  color: #455a64;
+}
+
+/* Colores en modo oscuro */
+[data-md-color-scheme="slate"] .md-content h2 {
+  color: #cfd8dc;
+}
+
+[data-md-color-scheme="slate"] .md-content h3 {
+  color: #b0bec5;
 }

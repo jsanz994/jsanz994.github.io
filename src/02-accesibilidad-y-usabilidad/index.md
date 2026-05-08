@@ -107,7 +107,7 @@ Botón circular flotante que representa la **acción principal** de la pantalla 
 
 **Reglas de diseño:**
 
-- Tamaño estándar: 56×56dp.
+- Tamaño estándar: 56×56 píxeles.
 - Situarlo en la esquina inferior derecha, sin bloquear el contenido.
 - Usar un icono claro que represente la acción.
 
@@ -119,7 +119,9 @@ Agrupar y dimensionar correctamente los elementos interactivos es clave para una
 
 ### Tamaño mínimo de los elementos táctiles
 
-Según las guías de **Material Design** (Google), todo elemento con el que el usuario pueda interactuar debe tener un área táctil mínima de **48×48dp** para garantizar que pueda pulsarse con precisión, aunque visualmente sea más pequeño.
+Según las guías de **Material Design** (Google), todo elemento con el que el usuario pueda interactuar debe tener un área táctil mínima de **48×48 píxeles** para garantizar que pueda pulsarse con precisión, aunque visualmente sea más pequeño.
+
+<img src="assets/Tamaño mínimo de elementos táctiles.png" alt="Tamaño mínimo de elementos táctiles" class="img-contenido" width="400">
 
 ### Tipos de botones
 
@@ -131,23 +133,57 @@ Material Design define tres niveles de jerarquía para los botones según su imp
 | **Outlined (contorneado)** | Solo borde | Acciones secundarias |
 | **Text** | Solo texto | Acciones terciarias o de bajo énfasis |
 
+<img src="assets/Tipos de botones.png" alt="Tipos de botones" class="img-contenido" width="400">
+
 ### Bordes redondeados
 
-El **radio de borde** (border radius) transmite personalidad a la interfaz:
+El **radio de borde** (border radius) ayuda a definir el estilo visual y la personalidad de la interfaz.
 
-- **4-8dp**: aspecto más formal y cuadrado.
-- **12-16dp**: equilibrio entre modernidad y formalidad (valor recomendado por defecto).
-- **Radio completo (pill)**: aspecto muy redondeado, habitual en chips y botones de buscador.
+- **4–8 px**: apariencia más rígida y tradicional.
+- **12–16 px**: equilibrio ideal entre modernidad, claridad y profesionalidad. Es el valor recomendado para la mayoría de interfaces móviles.
+- **Radio completo (pill)**: utilizado en chips, etiquetas, barras de búsqueda y algunos botones destacados.
 
-Mantener el mismo radio en **todos los botones y tarjetas** de la aplicación para asegurar la consistencia visual.
+En aplicaciones móviles modernas se recomienda utilizar **12–16 px** como radio base y mantenerlo de forma consistente en botones, tarjetas, campos de texto y otros componentes interactivos.
+
+La consistencia en el redondeado mejora:
+
+- la percepción visual de orden,
+- la coherencia del sistema de diseño,
+- y la sensación de calidad de la aplicación.
+
+<img src="assets/Bordes redondeados.png" alt="Bordes redondeados" class="img-contenido" width="400">
 
 ### Elevación y sombras
 
-La elevación indica qué elementos están "por encima" de otros visualmente:
+La **elevación** (elevation) permite crear jerarquía visual dentro de la interfaz mediante sombras y profundidad.
 
-- Los botones FAB tienen mayor elevación (sombra más pronunciada).
-- Las tarjetas (cards) tienen elevación media.
-- Los botones rellenos (filled) pueden tener una ligera sombra para destacar sobre el fondo.
+Los elementos con mayor elevación parecen estar "más cerca" del usuario y captan antes la atención.
+
+**¿Cuándo utilizar sombras?**
+
+Las sombras se utilizan principalmente para:
+
+- destacar acciones importantes,
+- separar elementos del fondo,
+- indicar componentes interactivos,
+- y reforzar la sensación de profundidad.
+
+**Uso habitual en interfaces móviles**
+
+- **Botones flotantes (FAB)**: utilizan sombras más pronunciadas para destacar como acción principal.
+- **Tarjetas (cards)**: suelen tener una elevación media para separarse visualmente del fondo.
+- **Modales y diálogos**: emplean una elevación alta para indicar que están por encima del contenido principal.
+- **Botones principales**: pueden incorporar una sombra suave para aumentar su visibilidad.
+
+**Recomendaciones**
+
+- Utilizar sombras sutiles y consistentes.
+- Evitar sombras excesivamente oscuras o difusas.
+- Mantener el mismo sistema de elevación en toda la aplicación.
+
+En interfaces modernas, una sombra ligera suele ser suficiente para transmitir profundidad sin sobrecargar el diseño.
+
+<img src="assets/Elevacion y sombreado.png" alt="Elevación y sombreado" class="img-contenido" width="400">
 
 !!! tip "Regla de oro"
     No mezclar estilos de botón dentro de una misma pantalla. Define un estilo para acción principal y otro para acción secundaria, y aplícalo de forma coherente en toda la app.
@@ -160,28 +196,35 @@ Una buena distribución de los elementos hace que la interfaz sea más cómoda d
 
 ### Márgenes y padding
 
-Se recomienda seguir la cuadrícula de **8dp** de Material Design:
+Para eliminar una sensación de "agobio" o apelotonamiento de los elementos en las pantallas, se recomienda el uso de paddings y márgenes.
 
 | Elemento | Valor recomendado |
 |----------|-------------------|
-| Margen lateral de la pantalla | **16dp** |
-| Espaciado entre elementos relacionados (ej.: icono y texto) | **8dp** |
-| Espaciado entre secciones diferentes | **16-24dp** |
-| Padding interno de tarjetas | **16dp** |
-| Altura mínima de un ítem de lista | **48dp** |
+| Margen lateral de la pantalla | **16 px** |
+| Espaciado entre icono y texto | **8 px** |
+| Espaciado entre elementos relacionados | **8 px** |
+| Espaciado entre bloques o secciones | **16–24 px** |
+| Padding interno de tarjetas (cards) | **16 px** |
+| Padding interno de botones | **12–16 px** |
+| Separación entre campos de formulario | **16 px** |
+| Espaciado entre título y contenido | **8–12 px** |
+| Altura mínima de un ítem de lista | **48 px** |
+| Separación respecto a bordes de modales/dialogs | **24 px** |
+| Área segura inferior/superior (safe area) | **16 px mínimo** |
+
+<img src="assets/Márgenes y paddings.png" alt="Márgenes y paddings" class="img-contenido" width="600">
 
 ### Posición del texto
 
-- El texto debe tener siempre suficiente padding respecto al borde del contenedor: mínimo **16dp** a los lados.
-- Evitar líneas de texto demasiado largas: en móvil, lo ideal es que una línea no supere **60-70 caracteres**.
+- El texto debe tener siempre suficiente padding respecto al borde del contenedor: mínimo **16 px** a los lados.
 - Alinear el texto a la izquierda en la mayoría de los casos. El texto centrado solo debe usarse para títulos cortos o mensajes de estado.
 
 ### Espaciado coherente
 
 Un espaciado coherente transmite orden y profesionalidad. Para lograrlo:
 
-1. Decidir una unidad base de espaciado (ej.: 8dp) y usarla como múltiplo para todos los márgenes y paddings.
-2. No mezclar valores arbitrarios (ej.: no usar 7dp, 11dp, 13dp...).
+1. Decidir una unidad base de espaciado (ej.: 8 px) y usarla como múltiplo para todos los márgenes y paddings.
+2. No mezclar valores arbitrarios (ej.: no usar 7 px, 11 px, 13 px...).
 3. Agrupar visualmente los elementos relacionados acercándolos; separar los no relacionados con más espacio.
 
 ---
@@ -217,35 +260,46 @@ El aspecto visual de la interfaz no es solo estética: afecta directamente a la 
 
 Utilizar **una sola tipografía** en toda la aplicación y diferenciar los niveles de texto mediante tamaño y peso (grosor), no mediante tipografías distintas.
 
+Una jerarquía tipográfica consistente mejora la legibilidad y ayuda al usuario a identificar rápidamente la importancia de cada contenido.
+
 | Nivel | Tamaño orientativo | Uso |
 |-------|--------------------|-----|
-| **Display / Hero** | 32-48sp | Títulos muy grandes, portadas |
-| **Headline (H1)** | 24-32sp | Títulos de pantalla principal |
-| **Title (H2)** | 18-22sp | Subtítulos de sección |
-| **Body** | 14-16sp | Texto de contenido general |
-| **Caption** | 11-12sp | Texto secundario, etiquetas, notas |
+| **Display / Hero** | 32-48 px | Títulos muy grandes, portadas |
+| **Headline (H1)** | 24-32 px | Títulos de pantalla principal |
+| **Title (H2)** | 18-22 px | Subtítulos de sección |
+| **Body** | 14-16 px | Texto de contenido general |
+| **Caption** | 11-12 px | Texto secundario, etiquetas, notas |
 
-!!! info "¿Qué es sp?"
-    En Android y FlutterFlow, los tamaños de texto se expresan en **sp** (scale-independent pixels). A diferencia de dp, los sp se escalan según las preferencias de tamaño de letra del dispositivo, mejorando la accesibilidad.
+<img src="assets/Jerarquía tipográfica.png" alt="Jerarquía tipográfica" class="img-contenido" width="600">
 
 ### Esquema de colores
 
-Una aplicación bien diseñada utiliza un **esquema de colores limitado y coherente**. Material Design propone los siguientes roles de color:
+Material Design organiza los colores según distintos roles dentro de la interfaz:
 
-| Rol de color | Descripción | Ejemplo |
-|-------------|-------------|---------|
-| **Primary** | Color principal de la marca, usado en elementos destacados | Botones principales, FAB |
-| **On Primary** | Color del texto/icono sobre el color primario | Texto blanco sobre botón azul |
-| **Secondary** | Color de acento para elementos secundarios | Chips, indicadores |
-| **Background** | Fondo general de las pantallas | Blanco o gris muy claro |
-| **Surface** | Fondo de tarjetas, hojas y diálogos | Blanco |
-| **Error** | Indicadores de error | Rojo |
+| Rol de color | Descripción | Uso habitual |
+|-------------|-------------|--------------|
+| **Primary** | Color principal de la marca | Botones principales, FAB, elementos destacados |
+| **On Primary** | Color del contenido mostrado sobre el color primario | Texto e iconos sobre botones o fondos primarios |
+| **Secondary** | Color de apoyo o acento | Chips, indicadores, elementos secundarios |
+| **Background** | Color de fondo general de la aplicación | Fondo principal de las pantallas |
+| **Surface** | Fondo de componentes elevados | Tarjetas, diálogos, menús, modales |
+| **Error** | Color utilizado para errores y estados críticos | Mensajes de error, campos inválidos |
+
+**Recomendaciones**
+
+- Mantener una paleta reducida para evitar sobrecargar visualmente la interfaz.
+- Utilizar el color principalmente para reforzar jerarquía e interacción.
+- Garantizar suficiente contraste entre texto y fondo para asegurar la accesibilidad.
+
+<img src="assets/Esquema de colores.png" alt="Esquema de colores" class="img-contenido" width="600">
 
 ### Iconos
 
 - Usar una **familia de iconos consistente** en toda la app (por ejemplo, Material Icons).
 - No mezclar iconos de estilo outline (contorneados) con iconos filled (rellenos) en la misma pantalla.
 - Los iconos deben ir **siempre acompañados de una etiqueta de texto** cuando su función no sea universalmente reconocible.
+
+<img src="assets/Iconos.png" alt="Iconos" class="img-contenido" width="600">
 
 ---
 
@@ -272,9 +326,9 @@ Un buen mensaje de aplicación debe:
 4. Usar un **lenguaje cercano y directo**, en segunda persona cuando sea posible.
 
 !!! example "Ejemplo: mensaje de error"
-    ❌ **Incorrecto:** "Error 403. Forbidden resource access."
+     **Incorrecto:** "Error 403. Forbidden resource access."
 
-    ✅ **Correcto:** "No tienes permiso para acceder a este contenido. Contacta con el administrador."
+     **Correcto:** "No tienes permiso para acceder a este contenido. Contacta con el administrador."
 
 ---
 
@@ -297,5 +351,3 @@ Una vez diseñada la interfaz, es importante verificar que los colores elegidos 
 | **AA (recomendado)** | 4.5:1 para texto normal / 3:1 para texto grande | Estándar mínimo para la mayoría de apps |
 | **AAA (óptimo)** | 7:1 para texto normal | Máxima accesibilidad |
 
-!!! tip "Regla práctica"
-    Si el texto tiene un tamaño de **18sp o mayor** (o 14sp en negrita), se considera "texto grande" y el ratio mínimo baja a 3:1. Para el resto del texto, apunta siempre a una ratio de al menos **4.5:1**.

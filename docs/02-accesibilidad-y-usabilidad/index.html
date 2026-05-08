@@ -1,0 +1,1729 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jsanz994.github.io/02-accesibilidad-y-usabilidad/">
+      
+      
+        <link rel="prev" href="../01-introduccion/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>2. Accesibilidad y Usabilidad - Desarrollo de interfaces</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Nunito";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-accesibilidad-y-usabilidad" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Desarrollo de interfaces" class="md-header__button md-logo" aria-label="Desarrollo de interfaces" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2m0 18H7V5h10zm-1-6h-3V8h-2v5H8l4 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo de interfaces
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Accesibilidad y Usabilidad
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Desarrollo de interfaces" class="md-nav__button md-logo" aria-label="Desarrollo de interfaces" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2m0 18H7V5h10zm-1-6h-3V8h-2v5H8l4 4z"/></svg>
+
+    </a>
+    Desarrollo de interfaces
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados de aprendizaje
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resultados de aprendizaje
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción a FlutterFlow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Accesibilidad y Usabilidad
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Accesibilidad y Usabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-resultado-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación del Resultado de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-usabilidad-y-accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Usabilidad y Accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Usabilidad y Accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accesibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-tipos-de-menus-y-patrones-de-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Tipos de menús y patrones de navegación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Tipos de menús y patrones de navegación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bottom-navigation-bar-barra-de-navegacion-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom Navigation Bar (Barra de navegación inferior)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawer-menu-lateral-deslizante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawer (Menú lateral deslizante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-bar-pestanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab Bar (Pestañas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-action-button-fab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Action Button (FAB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-distribucion-de-acciones-botones-y-controles-de-accion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Distribución de acciones: botones y controles de acción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Distribución de acciones: botones y controles de acción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-minimo-de-los-elementos-tactiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamaño mínimo de los elementos táctiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes-redondeados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes redondeados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elevacion-y-sombras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elevación y sombras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-distribucion-de-controles-en-la-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Distribución de controles en la interfaz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Distribución de controles en la interfaz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#margenes-y-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Márgenes y padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posicion-del-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Posición del texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espaciado-coherente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espaciado coherente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-el-control-adecuado-para-cada-situacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 El control adecuado para cada situación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 El control adecuado para cada situación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-entre-checkbox-y-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias clave entre Checkbox y Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-diseno-visual-colores-fuentes-e-iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Diseño visual: colores, fuentes e iconos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Diseño visual: colores, fuentes e iconos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-tipografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jerarquía tipográfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esquema-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquema de colores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iconos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-mensajes-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Mensajes de la aplicación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Mensajes de la aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-mensaje-y-color-asociado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de mensaje y color asociado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-redactar-un-buen-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo redactar un buen mensaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-pruebas-de-accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Pruebas de accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Pruebas de accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coolors-contrast-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coolors Contrast Checker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-resultado-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación del Resultado de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-usabilidad-y-accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Usabilidad y Accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Usabilidad y Accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accesibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-tipos-de-menus-y-patrones-de-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Tipos de menús y patrones de navegación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Tipos de menús y patrones de navegación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bottom-navigation-bar-barra-de-navegacion-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bottom Navigation Bar (Barra de navegación inferior)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawer-menu-lateral-deslizante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawer (Menú lateral deslizante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-bar-pestanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab Bar (Pestañas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-action-button-fab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Action Button (FAB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-distribucion-de-acciones-botones-y-controles-de-accion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Distribución de acciones: botones y controles de acción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Distribución de acciones: botones y controles de acción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-minimo-de-los-elementos-tactiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamaño mínimo de los elementos táctiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes-redondeados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes redondeados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elevacion-y-sombras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elevación y sombras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-distribucion-de-controles-en-la-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Distribución de controles en la interfaz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Distribución de controles en la interfaz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#margenes-y-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Márgenes y padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posicion-del-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Posición del texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espaciado-coherente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espaciado coherente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-el-control-adecuado-para-cada-situacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 El control adecuado para cada situación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 El control adecuado para cada situación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-entre-checkbox-y-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias clave entre Checkbox y Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-diseno-visual-colores-fuentes-e-iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Diseño visual: colores, fuentes e iconos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Diseño visual: colores, fuentes e iconos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-tipografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jerarquía tipográfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esquema-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquema de colores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iconos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-mensajes-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Mensajes de la aplicación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Mensajes de la aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-mensaje-y-color-asociado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de mensaje y color asociado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-redactar-un-buen-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo redactar un buen mensaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-pruebas-de-accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Pruebas de accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Pruebas de accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coolors-contrast-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coolors Contrast Checker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-accesibilidad-y-usabilidad">2. Accesibilidad y Usabilidad</h1>
+<h2 id="criterios-de-evaluacion-del-resultado-de-aprendizaje">Criterios de evaluación del Resultado de aprendizaje</h2>
+<div class="criterios">
+  <div class="criterio"><p>Se han identificado los principales estándares de usabilidad y accesibilidad.</p></div>
+  <div class="criterio"><p>Se han creado diferentes tipos de menús cuya estructura y contenido siguen los estándares establecidos.</p></div>
+  <div class="criterio"><p>Se han distribuido las acciones en menús, barras de herramientas, botones de comando, entre otros, siguiendo un criterio coherente.</p></div>
+  <div class="criterio"><p>Se han distribuido adecuadamente los controles en la interfaz de usuario.</p></div>
+  <div class="criterio"><p>Se ha utilizado el tipo de control más apropiado en cada caso.</p></div>
+  <div class="criterio"><p>Se ha diseñado el aspecto de la interfaz de usuario (colores y fuentes entre otros) atendiendo a su legibilidad.</p></div>
+  <div class="criterio"><p>Se ha verificado que los mensajes generados por la aplicación son adecuados en extensión y claridad.</p></div>
+  <div class="criterio"><p>Se han realizado pruebas para evaluar la usabilidad y accesibilidad de la aplicación.</p></div>
+</div>
+
+<hr />
+<h2 id="21-usabilidad-y-accesibilidad">2.1 Usabilidad y Accesibilidad</h2>
+<p>Antes de diseñar cualquier interfaz es imprescindible conocer dos conceptos fundamentales que deben guiar cada decisión de diseño.</p>
+<h3 id="usabilidad">Usabilidad</h3>
+<p>La <strong>usabilidad</strong> es la facilidad con la que un usuario puede utilizar una aplicación de forma intuitiva, sin necesidad de formación previa o de leer un manual.</p>
+<p>Una aplicación usable:</p>
+<ul>
+<li>Se aprende rápido: el usuario entiende cómo funciona en los primeros segundos.</li>
+<li>Es eficiente: permite completar tareas con el menor número de pasos posible.</li>
+<li>Es fácil de recordar: si el usuario no la usa durante un tiempo, puede retomar su uso sin dificultad.</li>
+<li>Minimiza los errores: dificulta que el usuario cometa errores y, si ocurren, facilita su recuperación.</li>
+<li>Es satisfactoria: genera una experiencia agradable.</li>
+</ul>
+<h3 id="accesibilidad">Accesibilidad</h3>
+<p>La <strong>accesibilidad</strong> engloba el conjunto de características de diseño que permiten que <strong>cualquier persona</strong>, independientemente de sus capacidades físicas, cognitivas o sensoriales, pueda utilizar nuestra aplicación.</p>
+<p>Aspectos clave de la accesibilidad:</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tipografía</strong></td>
+<td>Tamaño de letra legible, suficiente contraste entre texto y fondo.</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>No usar el color como único medio de transmitir información.</td>
+</tr>
+<tr>
+<td><strong>Tamaños táctiles</strong></td>
+<td>Los elementos interactivos deben ser suficientemente grandes para pulsarse con precisión.</td>
+</tr>
+<tr>
+<td><strong>Lectores de pantalla</strong></td>
+<td>Los elementos deben tener etiquetas descriptivas para personas con discapacidad visual.</td>
+</tr>
+<tr>
+<td><strong>Contraste</strong></td>
+<td>El contraste entre el texto y su fondo debe superar una ratio mínima para garantizar la legibilidad.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Recuerda</p>
+<p>Diseñar con accesibilidad no solo beneficia a personas con discapacidad. Una interfaz accesible es, en general, más clara y más fácil de usar para todo el mundo.</p>
+</div>
+<hr />
+<h2 id="22-tipos-de-menus-y-patrones-de-navegacion">2.2 Tipos de menús y patrones de navegación</h2>
+<p>En aplicaciones móviles, la navegación es uno de los elementos más críticos del diseño. El usuario debe saber en todo momento <strong>dónde está</strong> y <strong>cómo llegar</strong> a donde quiere ir.</p>
+<h3 id="bottom-navigation-bar-barra-de-navegacion-inferior">Bottom Navigation Bar (Barra de navegación inferior)</h3>
+<p>Es el patrón más habitual en apps móviles. Se sitúa en la parte inferior de la pantalla y permite acceder a las secciones principales de la aplicación de un solo toque.</p>
+<p><strong>Cuándo usarla:</strong></p>
+<ul>
+<li>Cuando la app tiene entre <strong>2 y 5 secciones principales</strong>.</li>
+<li>Cuando el usuario necesita cambiar de sección con frecuencia.</li>
+</ul>
+<p><strong>Reglas de diseño:</strong></p>
+<ul>
+<li>Mostrar siempre la sección activa con un color o icono diferenciado.</li>
+<li>Usar iconos acompañados de etiqueta de texto corta.</li>
+<li>No superar 5 elementos: si hay más, utilizar un menú adicional.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>[ 🏠 Inicio ] [ 🔍 Buscar ] [ ❤️ Favoritos ] [ 👤 Perfil ]
+</code></pre></div>
+<h3 id="drawer-menu-lateral-deslizante">Drawer (Menú lateral deslizante)</h3>
+<p>Panel que se desliza desde el lado izquierdo de la pantalla. Suele activarse pulsando el icono de "hamburgesa" (☰) o con un gesto de deslizamiento lateral.</p>
+<p><strong>Cuándo usarlo:</strong></p>
+<ul>
+<li>Cuando la aplicación tiene <strong>muchas secciones</strong> que no caben en la barra inferior.</li>
+<li>Para opciones secundarias o de configuración que no se usan con frecuencia.</li>
+</ul>
+<p><strong>Reglas de diseño:</strong></p>
+<ul>
+<li>El contenido principal no debe quedar bloqueado por el drawer.</li>
+<li>Incluir el nombre o avatar del usuario en la cabecera si la app tiene sesión iniciada.</li>
+</ul>
+<h3 id="tab-bar-pestanas">Tab Bar (Pestañas)</h3>
+<p>Pestañas situadas en la parte superior o inferior que permiten cambiar entre vistas relacionadas de un mismo apartado.</p>
+<p><strong>Cuándo usarlas:</strong></p>
+<ul>
+<li>Para dividir el <strong>contenido de una misma sección</strong> en categorías (ej.: "Todos", "Pendientes", "Completados").</li>
+<li>No mezclar con la Bottom Navigation Bar para la navegación principal.</li>
+</ul>
+<h3 id="floating-action-button-fab">Floating Action Button (FAB)</h3>
+<p>Botón circular flotante que representa la <strong>acción principal</strong> de la pantalla actual.</p>
+<p><strong>Cuándo usarlo:</strong></p>
+<ul>
+<li>Para la acción más importante y frecuente de esa pantalla (crear, añadir, escanear...).</li>
+<li>Solo debe haber <strong>un FAB por pantalla</strong>.</li>
+</ul>
+<p><strong>Reglas de diseño:</strong></p>
+<ul>
+<li>Tamaño estándar: 56×56 píxeles.</li>
+<li>Situarlo en la esquina inferior derecha, sin bloquear el contenido.</li>
+<li>Usar un icono claro que represente la acción.</li>
+</ul>
+<hr />
+<h2 id="23-distribucion-de-acciones-botones-y-controles-de-accion">2.3 Distribución de acciones: botones y controles de acción</h2>
+<p>Agrupar y dimensionar correctamente los elementos interactivos es clave para una interfaz coherente y usable.</p>
+<h3 id="tamano-minimo-de-los-elementos-tactiles">Tamaño mínimo de los elementos táctiles</h3>
+<p>Según las guías de <strong>Material Design</strong> (Google), todo elemento con el que el usuario pueda interactuar debe tener un área táctil mínima de <strong>48×48 píxeles</strong> para garantizar que pueda pulsarse con precisión, aunque visualmente sea más pequeño.</p>
+<p><img src="assets/Tamaño mínimo de elementos táctiles.png" alt="Tamaño mínimo de elementos táctiles" class="img-contenido" width="400"></p>
+<h3 id="tipos-de-botones">Tipos de botones</h3>
+<p>Material Design define tres niveles de jerarquía para los botones según su importancia:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Aspecto</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Filled (relleno)</strong></td>
+<td>Fondo de color sólido</td>
+<td>Acción principal de la pantalla</td>
+</tr>
+<tr>
+<td><strong>Outlined (contorneado)</strong></td>
+<td>Solo borde</td>
+<td>Acciones secundarias</td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td>Solo texto</td>
+<td>Acciones terciarias o de bajo énfasis</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/Tipos de botones.png" alt="Tipos de botones" class="img-contenido" width="400"></p>
+<h3 id="bordes-redondeados">Bordes redondeados</h3>
+<p>El <strong>radio de borde</strong> (border radius) ayuda a definir el estilo visual y la personalidad de la interfaz.</p>
+<ul>
+<li><strong>4–8 px</strong>: apariencia más rígida y tradicional.</li>
+<li><strong>12–16 px</strong>: equilibrio ideal entre modernidad, claridad y profesionalidad. Es el valor recomendado para la mayoría de interfaces móviles.</li>
+<li><strong>Radio completo (pill)</strong>: utilizado en chips, etiquetas, barras de búsqueda y algunos botones destacados.</li>
+</ul>
+<p>En aplicaciones móviles modernas se recomienda utilizar <strong>12–16 px</strong> como radio base y mantenerlo de forma consistente en botones, tarjetas, campos de texto y otros componentes interactivos.</p>
+<p>La consistencia en el redondeado mejora:</p>
+<ul>
+<li>la percepción visual de orden,</li>
+<li>la coherencia del sistema de diseño,</li>
+<li>y la sensación de calidad de la aplicación.</li>
+</ul>
+<p><img src="assets/Bordes redondeados.png" alt="Bordes redondeados" class="img-contenido" width="400"></p>
+<h3 id="elevacion-y-sombras">Elevación y sombras</h3>
+<p>La <strong>elevación</strong> (elevation) permite crear jerarquía visual dentro de la interfaz mediante sombras y profundidad.</p>
+<p>Los elementos con mayor elevación parecen estar "más cerca" del usuario y captan antes la atención.</p>
+<p><strong>¿Cuándo utilizar sombras?</strong></p>
+<p>Las sombras se utilizan principalmente para:</p>
+<ul>
+<li>destacar acciones importantes,</li>
+<li>separar elementos del fondo,</li>
+<li>indicar componentes interactivos,</li>
+<li>y reforzar la sensación de profundidad.</li>
+</ul>
+<p><strong>Uso habitual en interfaces móviles</strong></p>
+<ul>
+<li><strong>Botones flotantes (FAB)</strong>: utilizan sombras más pronunciadas para destacar como acción principal.</li>
+<li><strong>Tarjetas (cards)</strong>: suelen tener una elevación media para separarse visualmente del fondo.</li>
+<li><strong>Modales y diálogos</strong>: emplean una elevación alta para indicar que están por encima del contenido principal.</li>
+<li><strong>Botones principales</strong>: pueden incorporar una sombra suave para aumentar su visibilidad.</li>
+</ul>
+<p><strong>Recomendaciones</strong></p>
+<ul>
+<li>Utilizar sombras sutiles y consistentes.</li>
+<li>Evitar sombras excesivamente oscuras o difusas.</li>
+<li>Mantener el mismo sistema de elevación en toda la aplicación.</li>
+</ul>
+<p>En interfaces modernas, una sombra ligera suele ser suficiente para transmitir profundidad sin sobrecargar el diseño.</p>
+<p><img src="assets/Elevacion y sombreado.png" alt="Elevación y sombreado" class="img-contenido" width="400"></p>
+<div class="admonition tip">
+<p class="admonition-title">Regla de oro</p>
+<p>No mezclar estilos de botón dentro de una misma pantalla. Define un estilo para acción principal y otro para acción secundaria, y aplícalo de forma coherente en toda la app.</p>
+</div>
+<hr />
+<h2 id="24-distribucion-de-controles-en-la-interfaz">2.4 Distribución de controles en la interfaz</h2>
+<p>Una buena distribución de los elementos hace que la interfaz sea más cómoda de usar y visualmente más atractiva. Los elementos necesitan "respirar".</p>
+<h3 id="margenes-y-padding">Márgenes y padding</h3>
+<p>Para eliminar una sensación de "agobio" o apelotonamiento de los elementos en las pantallas, se recomienda el uso de paddings y márgenes.</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Valor recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Margen lateral de la pantalla</td>
+<td><strong>16 px</strong></td>
+</tr>
+<tr>
+<td>Espaciado entre icono y texto</td>
+<td><strong>8 px</strong></td>
+</tr>
+<tr>
+<td>Espaciado entre elementos relacionados</td>
+<td><strong>8 px</strong></td>
+</tr>
+<tr>
+<td>Espaciado entre bloques o secciones</td>
+<td><strong>16–24 px</strong></td>
+</tr>
+<tr>
+<td>Padding interno de tarjetas (cards)</td>
+<td><strong>16 px</strong></td>
+</tr>
+<tr>
+<td>Padding interno de botones</td>
+<td><strong>12–16 px</strong></td>
+</tr>
+<tr>
+<td>Separación entre campos de formulario</td>
+<td><strong>16 px</strong></td>
+</tr>
+<tr>
+<td>Espaciado entre título y contenido</td>
+<td><strong>8–12 px</strong></td>
+</tr>
+<tr>
+<td>Altura mínima de un ítem de lista</td>
+<td><strong>48 px</strong></td>
+</tr>
+<tr>
+<td>Separación respecto a bordes de modales/dialogs</td>
+<td><strong>24 px</strong></td>
+</tr>
+<tr>
+<td>Área segura inferior/superior (safe area)</td>
+<td><strong>16 px mínimo</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/Márgenes y paddings.png" alt="Márgenes y paddings" class="img-contenido" width="600"></p>
+<h3 id="posicion-del-texto">Posición del texto</h3>
+<ul>
+<li>El texto debe tener siempre suficiente padding respecto al borde del contenedor: mínimo <strong>16 px</strong> a los lados.</li>
+<li>Alinear el texto a la izquierda en la mayoría de los casos. El texto centrado solo debe usarse para títulos cortos o mensajes de estado.</li>
+</ul>
+<h3 id="espaciado-coherente">Espaciado coherente</h3>
+<p>Un espaciado coherente transmite orden y profesionalidad. Para lograrlo:</p>
+<ol>
+<li>Decidir una unidad base de espaciado (ej.: 8 px) y usarla como múltiplo para todos los márgenes y paddings.</li>
+<li>No mezclar valores arbitrarios (ej.: no usar 7 px, 11 px, 13 px...).</li>
+<li>Agrupar visualmente los elementos relacionados acercándolos; separar los no relacionados con más espacio.</li>
+</ol>
+<hr />
+<h2 id="25-el-control-adecuado-para-cada-situacion">2.5 El control adecuado para cada situación</h2>
+<p>Elegir el control correcto facilita la comprensión inmediata de la interfaz por parte del usuario.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Cuándo usarlo</th>
+<th>Ejemplo de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Button</strong></td>
+<td>Ejecutar una acción puntual</td>
+<td>"Guardar", "Enviar", "Eliminar"</td>
+</tr>
+<tr>
+<td><strong>Checkbox</strong></td>
+<td>Selección múltiple de opciones independientes</td>
+<td>Seleccionar varios elementos de una lista</td>
+</tr>
+<tr>
+<td><strong>Switch</strong></td>
+<td>Activar o desactivar una función (estado binario)</td>
+<td>"Activar notificaciones", "Modo oscuro"</td>
+</tr>
+<tr>
+<td><strong>TextField (Texto)</strong></td>
+<td>Introducir texto libre</td>
+<td>Nombre, correo, contraseña, búsqueda</td>
+</tr>
+</tbody>
+</table>
+<h3 id="diferencias-clave-entre-checkbox-y-switch">Diferencias clave entre Checkbox y Switch</h3>
+<p>Aunque ambos representan un estado binario (activado/desactivado), su uso es diferente:</p>
+<ul>
+<li><strong>Checkbox</strong>: se usa cuando hay varias opciones y el cambio <strong>no tiene efecto inmediato</strong> (se confirma con un botón "Guardar" o "Aplicar").</li>
+<li><strong>Switch</strong>: se usa cuando el cambio <strong>tiene efecto inmediato</strong>, sin necesidad de confirmar. Si activas el Switch de "Notificaciones", el cambio se aplica al instante.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Error frecuente</p>
+<p>No uses un Switch cuando el usuario necesite confirmar su elección. En ese caso, usa un Checkbox junto con un botón de confirmación.</p>
+</div>
+<hr />
+<h2 id="26-diseno-visual-colores-fuentes-e-iconos">2.6 Diseño visual: colores, fuentes e iconos</h2>
+<p>El aspecto visual de la interfaz no es solo estética: afecta directamente a la legibilidad y a la percepción de la aplicación.</p>
+<h3 id="jerarquia-tipografica">Jerarquía tipográfica</h3>
+<p>Utilizar <strong>una sola tipografía</strong> en toda la aplicación y diferenciar los niveles de texto mediante tamaño y peso (grosor), no mediante tipografías distintas.</p>
+<p>Una jerarquía tipográfica consistente mejora la legibilidad y ayuda al usuario a identificar rápidamente la importancia de cada contenido.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Tamaño orientativo</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display / Hero</strong></td>
+<td>32-48 px</td>
+<td>Títulos muy grandes, portadas</td>
+</tr>
+<tr>
+<td><strong>Headline (H1)</strong></td>
+<td>24-32 px</td>
+<td>Títulos de pantalla principal</td>
+</tr>
+<tr>
+<td><strong>Title (H2)</strong></td>
+<td>18-22 px</td>
+<td>Subtítulos de sección</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td>14-16 px</td>
+<td>Texto de contenido general</td>
+</tr>
+<tr>
+<td><strong>Caption</strong></td>
+<td>11-12 px</td>
+<td>Texto secundario, etiquetas, notas</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/Jerarquía tipográfica.png" alt="Jerarquía tipográfica" class="img-contenido" width="600"></p>
+<h3 id="esquema-de-colores">Esquema de colores</h3>
+<p>Material Design organiza los colores según distintos roles dentro de la interfaz:</p>
+<table>
+<thead>
+<tr>
+<th>Rol de color</th>
+<th>Descripción</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary</strong></td>
+<td>Color principal de la marca</td>
+<td>Botones principales, FAB, elementos destacados</td>
+</tr>
+<tr>
+<td><strong>On Primary</strong></td>
+<td>Color del contenido mostrado sobre el color primario</td>
+<td>Texto e iconos sobre botones o fondos primarios</td>
+</tr>
+<tr>
+<td><strong>Secondary</strong></td>
+<td>Color de apoyo o acento</td>
+<td>Chips, indicadores, elementos secundarios</td>
+</tr>
+<tr>
+<td><strong>Background</strong></td>
+<td>Color de fondo general de la aplicación</td>
+<td>Fondo principal de las pantallas</td>
+</tr>
+<tr>
+<td><strong>Surface</strong></td>
+<td>Fondo de componentes elevados</td>
+<td>Tarjetas, diálogos, menús, modales</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td>Color utilizado para errores y estados críticos</td>
+<td>Mensajes de error, campos inválidos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendaciones</strong></p>
+<ul>
+<li>Mantener una paleta reducida para evitar sobrecargar visualmente la interfaz.</li>
+<li>Utilizar el color principalmente para reforzar jerarquía e interacción.</li>
+<li>Garantizar suficiente contraste entre texto y fondo para asegurar la accesibilidad.</li>
+</ul>
+<p><img src="assets/Esquema de colores.png" alt="Esquema de colores" class="img-contenido" width="600"></p>
+<h3 id="iconos">Iconos</h3>
+<ul>
+<li>Usar una <strong>familia de iconos consistente</strong> en toda la app (por ejemplo, Material Icons).</li>
+<li>No mezclar iconos de estilo outline (contorneados) con iconos filled (rellenos) en la misma pantalla.</li>
+<li>Los iconos deben ir <strong>siempre acompañados de una etiqueta de texto</strong> cuando su función no sea universalmente reconocible.</li>
+</ul>
+<p><img src="assets/Iconos.png" alt="Iconos" class="img-contenido" width="600"></p>
+<hr />
+<h2 id="27-mensajes-de-la-aplicacion">2.7 Mensajes de la aplicación</h2>
+<p>Los mensajes que la aplicación muestra al usuario (confirmaciones, errores, avisos...) deben ser <strong>claros, concisos y coherentes</strong> con el color que los representa.</p>
+<h3 id="tipos-de-mensaje-y-color-asociado">Tipos de mensaje y color asociado</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de mensaje</th>
+<th>Color</th>
+<th>Cuándo usarlo</th>
+<th>Ejemplo de texto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Éxito</strong></td>
+<td>🟢 Verde</td>
+<td>Operación completada correctamente</td>
+<td>"El registro se ha guardado correctamente."</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td>🔴 Rojo</td>
+<td>Acción fallida, dato incorrecto, eliminación</td>
+<td>"No se ha podido guardar. Comprueba tu conexión."</td>
+</tr>
+<tr>
+<td><strong>Aviso</strong></td>
+<td>🟡 Amarillo / Ámbar</td>
+<td>Acción que requiere atención o puede tener consecuencias</td>
+<td>"Esta acción eliminará todos los datos. ¿Deseas continuar?"</td>
+</tr>
+<tr>
+<td><strong>Información</strong></td>
+<td>🔵 Azul</td>
+<td>Mensajes neutros e informativos</td>
+<td>"La sincronización se realizará al conectarse a WiFi."</td>
+</tr>
+</tbody>
+</table>
+<h3 id="como-redactar-un-buen-mensaje">Cómo redactar un buen mensaje</h3>
+<p>Un buen mensaje de aplicación debe:</p>
+<ol>
+<li><strong>Describir exactamente lo que ha ocurrido</strong>, sin tecnicismos.</li>
+<li><strong>Indicar qué debe hacer el usuario</strong> si se requiere alguna acción.</li>
+<li>Ser <strong>breve</strong>: una o dos frases como máximo.</li>
+<li>Usar un <strong>lenguaje cercano y directo</strong>, en segunda persona cuando sea posible.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo: mensaje de error</p>
+<p><strong>Incorrecto:</strong> "Error 403. Forbidden resource access."</p>
+<p><strong>Correcto:</strong> "No tienes permiso para acceder a este contenido. Contacta con el administrador."</p>
+</div>
+<hr />
+<h2 id="28-pruebas-de-accesibilidad">2.8 Pruebas de accesibilidad</h2>
+<p>Una vez diseñada la interfaz, es importante verificar que los colores elegidos cumplen los requisitos mínimos de contraste para garantizar la legibilidad.</p>
+<h3 id="coolors-contrast-checker">Coolors Contrast Checker</h3>
+<p><a href="https://coolors.co/contrast-checker"><strong>Coolors Contrast Checker</strong></a> es una herramienta online que permite comprobar si la combinación de un color de texto y un color de fondo ofrece suficiente contraste para ser legible.</p>
+<p><strong>Cómo usarla:</strong></p>
+<ol>
+<li>Introduce el <strong>color del texto</strong> (en formato HEX, por ejemplo <code>#FFFFFF</code>).</li>
+<li>Introduce el <strong>color del fondo</strong> (por ejemplo <code>#1565C0</code>).</li>
+<li>La herramienta muestra la <strong>ratio de contraste</strong> y si supera los umbrales recomendados:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Ratio mínima</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AA (recomendado)</strong></td>
+<td>4.5:1 para texto normal / 3:1 para texto grande</td>
+<td>Estándar mínimo para la mayoría de apps</td>
+</tr>
+<tr>
+<td><strong>AAA (óptimo)</strong></td>
+<td>7:1 para texto normal</td>
+<td>Máxima accesibilidad</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
